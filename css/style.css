@@ -10,3 +10,8 @@
     width: 100%;
     margin: 0 auto;
 }
+
+/* button dang ky */
+.btn-res{
+    padding: 8px 12px;
+}
