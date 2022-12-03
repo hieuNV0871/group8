@@ -47,6 +47,12 @@
                 if(isset($_SESSION['dangnhap'])){
                   // setcookie("username",$_COOKIE['dangnhap'],time()+3600,"/");
               ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?dangxuat=1">Log out</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?quanly=thaydoimatkhau">Change Password</a> 
+                </li>
               <?php
                 }else{
               ?>
