@@ -10,3 +10,32 @@
     width: 100%;
     margin: 0 auto;
 }
+
+.name-course{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+}
+.price-course,
+.join-course{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.btn-choose{
+    margin-left: 158px;
+    margin-bottom: 10px;
+}
+.btn-course{
+    padding: 8px 32px;
+    font-size: 15px;
+    background-color: #ee4d2d;
+    outline: none;
+    color: #fff;
+    border: 1px solid #FF6600;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.btn-course:hover{
+    color: #000;
+    background-color: #ccc;
+}
