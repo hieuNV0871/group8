@@ -1,4 +1,11 @@
-
+<?php
+    session_start();
+    // $taikhoan = $_SESSION['dangnhap'];
+    if(!isset($_SESSION['dangnhapadmin'])){
+        header("Location: login.php");
+        // echo $_SESSION['dangnhap'];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +25,11 @@
                     <li><a class = "list-items nav-link nav-item" href="index.php?action=quanlydanhmucsanpham">Quản lý danh mục sản phẩm</a></li>
                     <li><a class = "list-items nav-link nav-item" href="index.php?action=quanlysanpham">Quản lý sản phẩm</a></li>
                     <li><a class = "list-items nav-link nav-item" href="index.php?action=quanlydonhang">Quản lý đơn hàng</a></li>
-                    <li><a class = "list-items nav-link nav-item" href="index.php?action=dangxuat">Đăng xuất</a></li>
+                    <li><a class = "list-items nav-link nav-item" href="index.php?action=dangxuat">Đăng xuất: <?php 
+                    if(isset($_SESSION['dangnhapadmin'])){
+                        echo $_SESSION['dangnhapadmin'];
+                    }
+                    ?></a></li>
                 </ul>
             </div>
         </div>
@@ -34,7 +45,10 @@
                     include("./modules/quanlydanhmucsanpham/lietke.php");
                 }else if($click == 'quanlysanpham'){
                     include("./modules/quanlysanpham/them.php");
-                    include("./modules/quanlysanpham/lietke.php");               
+                    include("./modules/quanlysanpham/lietke.php");
+                }else if($click == 'quanlydonhang'){
+                    // include("./modules/quanlydonhang/xemdonhang.php");
+                    include("./modules/quanlydonhang/lietke.php");
                 }else if($click == 'dangxuat'){
                     unset($tk);
                     header("Location: login.php");
