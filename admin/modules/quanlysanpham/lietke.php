@@ -58,8 +58,8 @@
                         <td height = "50"><?php echo $giakhoahoc[$i];?></td>
                         <td height = "50" class="items"><?php echo $songuoi[$i];?></td>
                         <td height = "50" class="items"><?php echo $tendanhmuc[$i];?></td>
-                        <td width = "50"><a href="" class="change">Sửa</a></td>
-                        <td width = "50"><a href="" class="change">Xóa</a></td>
+                        <td width = "50"><a href="modules/quanlysanpham/sua.php?idkhoahoc=<?php echo $id[$i];?>" class="change">Sửa</a></td>
+                        <td width = "50"><a href="modules/quanlysanpham/xuly.php?idkhoahoc=<?php echo $id[$i];?>" class="change">Xóa</a></td>
                     </tr>
                             
                     <?php 
