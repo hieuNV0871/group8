@@ -48,7 +48,10 @@
     </tr>
     <?php
             }
-            
+            ?>
+        <td colspan="5">Tổng tiền sản phẩm bạn mua: <?php echo number_format($allsp,0,',','.');?>đ</td>
+        <td><a style="text-decoration: none;" href="pages/main/themsanpham.php?xoatatca=1">Xóa tất cả sản phẩm hiện có</a></td>
+        <?php
           if(isset($_SESSION['dangnhap'])){
         ?>
         <a style="text-decoration: none; text-align:center; width: 5%;" class="btn btn-primary" href="index.php?quanly=thanhtoan">Đặt Hàng</a>
