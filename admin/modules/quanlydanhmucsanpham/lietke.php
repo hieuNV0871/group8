@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="./css/styleAdmin.css">
 </head>
 <body>
-    <!-- <?php 
-        // $conn = mysqli_connect("localhost","root","");
-        // $db = mysqli_select_db($conn,"dbkhoahoc");
-        // $sql_select = "Select * from tbldanhmuc";
-        // $result_sql = mysqli_query($conn,$sql_select);
-        // $nums_result = mysqli_num_rows($result_sql);
-        // $stt = 0;
-        // while($rows = mysqli_fetch_object($result_sql)){
-        //     $stt++;
-        //     $id[$stt] = $rows -> id;
-        //     $tendanhmuc[$stt] = $rows -> tendanhmuc;
-        //     $thutu[$stt] = $rows -> stt;
-        // }
-    ?>  -->
+    <?php 
+        $conn = mysqli_connect("localhost","root","");
+        $db = mysqli_select_db($conn,"dbkhoahoc");
+        $sql_select = "Select * from tbldanhmuc";
+        $result_sql = mysqli_query($conn,$sql_select);
+        $nums_result = mysqli_num_rows($result_sql);
+        $stt = 0;
+        while($rows = mysqli_fetch_object($result_sql)){
+            $stt++;
+            $id[$stt] = $rows -> id;
+            $tendanhmuc[$stt] = $rows -> tendanhmuc;
+            $thutu[$stt] = $rows -> stt;
+        }
+    ?> 
     <p class="display-6">Liệt kê danh sách sản phẩm</p>
     <table class="table" border="1" width = "500">
             <thead>
