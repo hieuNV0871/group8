@@ -6,7 +6,7 @@
     $time = date_default_timezone_set("Asia/Ho_Chi_Minh");
     $date = date("Y-m-d H:i:s");
     $insert_cart = "INSERT INTO tblgiohang(id_kh,madonhang,thoigianmua,tinhtrang) VALUES ($idkh,'$codedh','$date','1')";
-    echo $insert_cart;
+
     $result_cart = mysqli_query($conn,$insert_cart);
     // echo $result_insert_cart;
     if($result_cart){
@@ -21,6 +21,5 @@
     }else{
     }
     unset($_SESSION['cart']);
-    echo '<p>Cảm ơn vì đã đăng ký khóa học của chúng tôi, chúng tôi sẽ liên hệ sớm nhất!</p>';
     // header("Location: ../../Trangchu.php"); 
 ?>
