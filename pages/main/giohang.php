@@ -57,7 +57,9 @@
         <a style="text-decoration: none; text-align:center; width: 5%;" class="btn btn-primary" href="index.php?quanly=thanhtoan">Đặt Hàng</a>
         <?php
           }else{
-        
+        ?>
+            <td><a style="text-decoration: none;" href="index.php?quanly=dangnhap">Đăng nhập để đặt hàng sản phẩm</a></td>
+        <?php
           }
         ?>
     <?php
