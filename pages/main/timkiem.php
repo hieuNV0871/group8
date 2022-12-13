@@ -1,7 +1,7 @@
 <?php
     $tukhoa = $_REQUEST['keyword'];
     $timkiem = $_REQUEST['timkiem'];
-    $select_find = "Select * from tblkhoahoc where tenkhoahoc = '$tukhoa'";
+    $select_find = "Select * from tblkhoahoc where tenkhoahoc like '%$tukhoa%'";
     $result_find = mysqli_query($conn,$select_find);
 ?>
 <h3>Search Keywords: <?php echo $tukhoa;?></h3>
