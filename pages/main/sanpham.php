@@ -52,7 +52,10 @@
               <i class="far fa-star fa-sm text-primary"></i>
             </li>
           </ul>
-          
+          <h6><?php echo number_format($row_detail["giakhoahoc"],0,',','.')?> đ / 3 months</h6>
+          <p class="pt-1">About: <?php echo $row_detail["songuoi"]?> people</p>
+          <span class="ct-course">Category: <?php echo $row_detail["tendanhmuc"]?></span><br>
+          <input type="submit" name="themsanpham" value="Insert Product" class="btn-course themsanpham">
         </div>
       </form>
   </div>
