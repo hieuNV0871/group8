@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     if(isset($_REQUEST['madonhang'])){
         $madh = $_REQUEST['madonhang'];
         $conn = mysqli_connect("localhost","root","");
@@ -6,7 +6,7 @@
         $sql_select_chitiet = "Select * from tblchitietdonhang ctdh,tblkhoahoc kh where ctdh.id_sp = kh.id_kh and madonhang = '$madh'";
         $result_select_chitiet = mysqli_query($conn,$sql_select_chitiet);
     }
-?>
+?> -->
 <p style="text-align: center;">Chi tiết đơn hàng</p>
     <table class="table" border="1" width = "1200" align="center">
             <thead>

@@ -12,7 +12,7 @@
     <table class="table" border="1" width = "1200" align="center">
             <thead>
                 <tr >
-                    <th scope="col">STT</th>
+                    <!-- <th scope="col">STT</th>
                     <th scope="row">Mã khóa học</th>
                     <th scope="row">Tên khách hàng</th>
                     <th scope="row">Tuổi</th>
@@ -20,7 +20,7 @@
                     <th scope="row">Số điện thoại</th>
                     <th scope="row">Địa chỉ</th>
                     <th scope="row">Thời gian mua khóa học</th>
-                    <th scope="row">Quản lý</th>
+                    <th scope="row">Quản lý</th> -->
                     <!-- <td width = "200"></td> -->
                 </tr>
             </thead>
