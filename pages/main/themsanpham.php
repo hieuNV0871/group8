@@ -11,8 +11,27 @@
         if($row){
             $new_product = array(array('id' => $id,'tenkhoahoc' => $row["tenkhoahoc"], 'songuoi' => $songuoi, 'giakhoahoc' => $row["giakhoahoc"], 'hinhanh' => $row['anh_kh']));
             //kiểm tra giỏ hàng tồn tại hay chưa
-        
+            if(isset($_SESSION['cart'])){
+                $found = false;
+                foreach($_SESSION['cart'] as $cart_item){
+                    if($cart_item['id'] == $id){
+                        // echo $cart_item['id'];
+                        $product[] = array('id' => $cart_item['id'],'tenkhoahoc' => $cart_item["tenkhoahoc"], 'songuoi' => $songuoi+1, 'giakhoahoc' => $cart_item["giakhoahoc"]);
+                        $found = true;
+                    }else{
+                        $product[] = array('id' =>  $cart_item['id'],'tenkhoahoc' => $cart_item["tenkhoahoc"], 'songuoi' => $songuoi, 'giakhoahoc' => $cart_item["giakhoahoc"]);
+                    }
+                }
+                if($found == false){
+                    $_SESSION['cart'] = array_merge($product,$new_product);
+                }else{
+                    $_SESSION['cart'] = $product;
+                }
+            }else{
+                $_SESSION['cart'] = $new_product;
+            }
         }
+        
         header("Location: ../../index.php?quanly=giohang");   
         // print_r($_SESSION['cart']);
     }
@@ -22,7 +41,17 @@
         header("Location: ../../index.php?quanly=giohang");  
     }
     //Xóa từng sản phẩm
-   
+    if(isset($_SESSION['cart']) && isset($_GET['xoa'])){
+        $id = $_GET['xoa'];
+        foreach($_SESSION['cart'] as $cart_item){
+            if($cart_item['id'] !== $id){
+                // echo $cart_item['id'];
+                $product[] = array('id' => $cart_item['id'],'tenkhoahoc' => $cart_item["tenkhoahoc"], 'songuoi' => $cart_item['songuoi'], 'giakhoahoc' => $cart_item["giakhoahoc"]);
+            }
+            $_SESSION['cart'] = $product;
+            header("Location: ../../index.php?quanly=giohang"); 
+        }
+    }
     //Cộng và trừ sản phẩm
     if(isset($_GET['cong'])){
         $id = $_GET['cong'];
