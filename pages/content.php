@@ -27,7 +27,7 @@
   }
 ?>             
         <div class="content">
-            <div class="name">New Courses</div>
+            <div class="name">khoa hoc moi</div>
             <div class="grid">
             <ul class="nav">
               <li class="nav-item">
